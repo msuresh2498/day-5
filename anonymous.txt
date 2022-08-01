@@ -1,0 +1,81 @@
+Anonymous function:
+sum of all numbers of array:
+
+let sum1 = 0;
+var sum = function(arr){
+    arr.forEach(Element=>{
+        sum1+=Element;
+    })
+    console.log(sum1)
+}
+sum([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
+
+
+odd numbers:
+
+let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+(function odd(array){
+    for (var i=0; i<=array.length; i++){
+        if(array[i]%2!=0)
+        console.log(array[i])
+    }
+})
+(array)
+
+
+Convert all the strings to titlecaps in a String array:
+
+var string = function (str){
+str.forEach(element => {
+    console.log(element.charAt(0).toUpperCase() + element.substr(1))
+});
+}
+string(["car","bus","welcome to guvi"])
+
+Rotate an array by k times:
+
+let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+var rotate = function(array,k){
+    for (let i=0; i<=k; i++){
+        console.log(array.unshift(array.pop()))
+        console.log(array)
+    }
+}
+rotate(array,20)
+
+Return all the palindromes in an array:
+
+var result = []
+var arr = function(array){
+for (var i=0; i<array.length; i++){
+    var array1 = array[i].split("")
+    if(array[i]==array1.reverse().join("")){
+        result.push(array[i])
+    }
+}
+}
+arr(["appa","1221","malayalam","suresh",])
+console.log(result)
+
+
+Print all the prime numbers in an array:
+
+let arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+let result = [];
+function isPrime(arr) {
+  if(arr < 2) return false;
+
+  for (let i = 2; i < arr; i++){
+    if(arr % i == 0){
+      return false;
+    }
+  }
+  return true;
+}
+arr.forEach(function (element) {
+  const item = isPrime(element);
+  if (item) {
+    result.push(element);
+  }
+});
+console.log(result);
